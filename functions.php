@@ -30,15 +30,15 @@
     
     if( function_exists('acf_add_options_page') ) {
         acf_add_options_page([
-            'page_title' => 'Sections générales',
-            'menu_title' => 'Sections',
-            'menu_slug' => 'sections-generales',
+            'page_title' => 'Options',
+            'menu_title' => 'Options',
+            'menu_slug' => 'options',
             'capability' => 'edit_posts',
             'parent_slug' => '',
             'position' => 10,
             'icon_url' => 'dashicons-align-full-width',
             'redirect' => false,
-            'post_id' => 'sections',
+            'post_id' => 'options',
             'autoload' => false,
             'update_button' => 'Mettre à jour',
         ]);
