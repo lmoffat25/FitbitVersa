@@ -5,8 +5,25 @@
     /** @link https://developer.wordpress.org/themes/basics/the-loop/  */
     if( have_posts() ): while( have_posts() ) : the_post();
 
-        $postID = get_the_ID();
-        $postData = get_post($postID);
+        // Custom Query
+        $args = array(
+            'post-type' => 'product',
+            'post_per_page' => -1,
+            'orderby' => 'name',
+        )
+
+        $the_query = new WP_Query( $args );
+
+        if ( $the_query->have_post() ) :
+            while ( $the_query->have_post() ) : $the_query->the_post();
+
+            $postID = get_the_ID();
+            $postdata = get_port($postID);
+
+            $repeater = get_field("caracteristiques", $postID);
+
+            endwhile;
+        endif;
 
         $tagline = get_field("nomdechamps");
 

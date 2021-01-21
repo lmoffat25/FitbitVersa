@@ -44,6 +44,20 @@
         ]);
     }
 
+  /*  if( function_exists('acf_add_options_page') ) {
+	
+        acf_add_options_page(array(
+            'page_title' 	=> "Page d'options",
+            'menu_title'	=> 'Options',
+            'menu_slug' 	=> 'page-options',
+            'capability'	=> 'edit_posts',
+            'redirect'		=> false
+        ));
+        
+
+        
+    }*/
+
     /***********************************
      * END : Ajout des pages d'options 
      * ********************************/
