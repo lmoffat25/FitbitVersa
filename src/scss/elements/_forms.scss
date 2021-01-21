@@ -1,0 +1,32 @@
+/*#######################################################
+
+Table des matières  :
+
+    #1 Forms
+
+#########################################################*/
+
+/* -----------------------------------------------------
+    #1 Form
+----------------------------------------------------------*/
+$states : ("incorrect", $red), ("correct", $green), ("filled", $primary-color);
+
+.input {
+    border : none;
+    border-bottom : rem(1) solid #C9C8CD;
+    padding-bottom : rem(10);
+    &:focus {
+        outline : none;
+    }
+
+    @each $state in $states {
+        &.-#{nth($state, 1)} {
+            border-bottom : rem(1) solid #{nth($state, 2)};
+            color : #{nth($state, 2)};
+
+            &:placeholder {
+                color : #{nth($state, 2)};
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.bg-triangle {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    height: 600px;
+    justify-content: space-evenly;
+    position: relative;
+    
+    &:before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-style: solid;
+        border-color: transparent;
+        border-width: 30vh 50vw;
+        border-bottom-color: $primary-color-dark;
+        border-right-color: $primary-color-dark;
+        z-index: -1;
+    }
+}

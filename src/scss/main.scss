@@ -1,42 +1,45 @@
-// Foundations
-@import "./foundation/variables";
-@import "./foundation/functions";
-@import "./foundation/mixins";
-@import "./foundation/normalize";
-@import "./foundation/grid";
-@import "./foundation/animations";
+//Abtract
+@import "./abstract/functions";
+@import "./abstract/mixins";
+@import "./abstract/variables";
 
-// Elements
+//Components
+@import "./components/cards";
+@import "./components/customisation";
+@import "./components/footer";
+@import "./components/navigation";
+@import "./components/newsletter";
+@import "./components/scrollblock";
+@import "./components/text-photo";
+@import "./components/top-banner";
+
+//Elements
 @import "./elements/buttons";
-@import "./elements/typography";
-@import "./elements/input";
-@import "./elements/burger";
-@import "./elements/watch";
+@import "./elements/elements";
+@import "./elements/forms";
+@import "./elements/toggles";
 
-// Components
-//@import "./components/nav-css-animation";
-@import "./components/nav-css-animation";
-@import "./components/product";
-@import "./components/dots"; 
-@import "./components/form"; 
+//Global
+@import "./global/base";
+@import "./global/normalize";
 
-//layout
-@import "./layout/section";
-@import "./layout/personnalisation";
+//Plugins
+@import "./plugins/jetpack/infinite-scroll";
+//@import "./plugins/woocommerce/checkout";
+//@import "./plugins/woocommerce/components";
+//@import "./plugins/woocommerce/products";
+//@import "./plugins/woocommerce/single-product";
+//@import "./plugins/woocommerce/tables";
+//@import "./plugins/woocommerce/widgets";
 
+//Template
+@import "./template/columns";
 
-//Pages
-@import "./pages/sense-fonctions";
- 
+//Typography
+@import "./typography/body";
+@import "./typography/headings";
 
 html,body{
     margin: 0;
     padding : 0;
-}
-
-.header{
-    &__burgercontainer{
-        text-align: right;
-    }
-    
 }
