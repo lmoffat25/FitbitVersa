@@ -6,6 +6,12 @@
         wp_enqueue_style( 'main', get_template_directory_uri() .'/dist/css/main.css' );  
         wp_enqueue_script( 'perso', get_template_directory_uri() . '/dist/js/perso.js', array('jquery'), '2.0', true);
         wp_enqueue_script( 'navigation', get_template_directory_uri() . '/dist/js/main-csss-animation.js', array(), '2.0', true);
+
+        wp_enqueue_script( 'nav', get_template_directory_uri() . '/dist/js/main-menu.js', array(), '2.0', true);
+        wp_enqueue_script( 'menu-deroulant', get_template_directory_uri() . '/dist/js/menu-deroulant.js', array(), '2.0', true);
+        wp_enqueue_script( 'scrollmagicLib', get_template_directory_uri() . '/dist/js/libraries/ScrollMagic.min.js', array(), '2.0', true);
+        wp_enqueue_script( 'scrollmagic', get_template_directory_uri() . '/dist/js/scrollmagic.js', array(), '2.0', true);
+
     }
 
     /** @link https://developer.wordpress.org/plugins/hooks/ */
