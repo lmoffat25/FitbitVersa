@@ -1,29 +1,39 @@
-<!DOCTYPE html>
-<?php /** @link https://developer.wordpress.org/reference/functions/language_attributes/ */ ?>
+<?php
+/**
+ * The header for our theme
+ *
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package versa-theme
+ */
+?>
+<!doctype html>
 <html <?php language_attributes(); ?>>
-
 <head>
-    <?php /** @link https://developer.wordpress.org/reference/functions/bloginfo/ */ ?>
-    <meta charset="<?php bloginfo("charset"); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <?php /** @link https://developer.wordpress.org/reference/functions/the_title/ */?>
-    <title> <?php bloginfo("name"); ?> | <?php the_title(); ?></title>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-    <?php /** @link https://developer.wordpress.org/reference/functions/wp_head/ */ ?>
-    <?php wp_head(); ?>
-
+	<?php wp_head(); ?>
 </head>
 
 <body>
-
-<header class="header">
-        <div class="header__burgercontainer">
-            <div class="burger"></div>
-        </div>
-        <?php lpwd_clean_custom_menu("navigation") ?>
-    </header>
-
-
-    <div class="container">
-
+	<header class="header">
+        <nav class="mainNav nav -close admin-header">
+            <div class="mainNav__container col-md-10 centerHz">
+                <a href="" class="mainNav__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/fitbit-logo.png" alt="Image"></a>
+                <ul class="mainNav__list col-s-8 ">
+                    <li class="mainNav__link"><a href="">Fitbit Versa 3</a></li>
+                    <li class="mainNav__link"><a href="">à propos de fitbit</a></li>
+                    <li class="mainNav__link"><a href="">support</a></li>
+                    <li class="mainNav__icon"><a href=""><img src="" alt="icone"></a></li>
+                    <li class="mainNav__icon"><a href=""><img src="" alt="icone"></a></li>
+                    <li class="mainNav__icon"><a href=""><img src="" alt="icone"></a></li>
+                    <li class="mainNav__account"><a href="" class="button">Mon Compte</a></li>
+                    <li class="mainNav__account"><a href="" class="button -secondary">Déconnexion</a></li>
+                </ul>
+            </div>
+        </nav>
+	</header>

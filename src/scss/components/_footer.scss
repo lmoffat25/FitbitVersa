@@ -1,0 +1,36 @@
+.footer {
+    border-top : rem(2) solid $black;
+    padding-top : rem(16);
+    margin-top: rem(20);
+    display : flex;
+    flex-flow : wrap;
+    justify-content : space-between;
+
+    &__copyright {
+        color : $secondary-color;
+    }
+
+    &__content {
+        display : flex;
+        flex-flow : wrap;
+        align-items: center;
+    }
+
+    &__item {
+        border-right  : rem(2) solid $black;
+        padding : rem(2) rem(16) 0 0;
+        margin-right: rem(16);
+        height : fit-content;
+        text-decoration : none;
+        color : $black;
+
+        &:visited {
+            color : inherit;
+        }
+
+        &:last-of-type {
+            border : none;
+            padding-right : none;
+        }
+    }
+}
