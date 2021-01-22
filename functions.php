@@ -11,6 +11,7 @@
         wp_enqueue_script( 'menu-deroulant', get_template_directory_uri() . '/dist/js/menu-deroulant.js', array(), '2.0', true);
         wp_enqueue_script( 'scrollmagicLib', get_template_directory_uri() . '/dist/js/libraries/ScrollMagic.min.js', array(), '2.0', true);
         wp_enqueue_script( 'scrollmagic', get_template_directory_uri() . '/dist/js/scrollmagic.js', array(), '2.0', true);
+        wp_enqueue_script( 'progressBar', get_template_directory_uri() . '/dist/js/loadingbar.js', array(), '2.0', true);
 
     }
 

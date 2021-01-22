@@ -31,6 +31,23 @@ Table des matières :
     #4 Other
 ----------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+.about-page .loader {
+  position: fixed;
+  bottom: 25%;
+  left: 10%;
+  width: 0.3125rem;
+  height: 4.6875rem;
+  background: #9D9CA6;
+  border-radius: 0.3125rem;
+  opacity: 1 !important;
+}
+.about-page .loader__fill {
+  width: 0.3125rem;
+  background: #35436A;
+  display: block;
+  border-radius: 0.3125rem;
+}
+
 .about-page__title {
   position: fixed;
 }
@@ -1020,6 +1037,27 @@ Table des matières :
 }
 .dropdownCustom.-functionalities .-icon:before {
   font-size: 2.1875rem;
+}
+
+.ldBar {
+  position: relative;
+}
+
+.ldBar.label-center > .ldBar-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 3px #fff;
+}
+
+.ldBar-label:after {
+  content: "%";
+  display: inline;
+}
+
+.ldBar.no-percent .ldBar-label:after {
+  content: "";
 }
 
 img {

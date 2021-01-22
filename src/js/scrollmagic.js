@@ -1,6 +1,5 @@
 // SETUP ########################################################
 // init controller
-console.log("load-scrollmagic");
 const controller = new ScrollMagic.Controller();
 let triggers = document.querySelectorAll(".trigger");
 var triggerlength = triggers.length;
@@ -65,3 +64,4 @@ var active = function(scrollLength) {
 }
 
 main();
+

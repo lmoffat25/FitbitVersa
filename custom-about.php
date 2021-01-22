@@ -4,6 +4,7 @@
  wp_head();
 ?>
 <main class="about-page">
+
     <h1 class="about-page__title"><?php echo get_the_title() ?></h1>
 
     <section class="about-section scroll-about">
@@ -11,6 +12,9 @@
                 <div class="trigger" id="trigger2"></div>
                 <div class="trigger" id="trigger3"></div>
                 <div class="trigger" id="trigger4"></div>
+
+                <div class="loader"><span class="loader__fill" style="height : 0%;"></span></div>
+
 
                 <div id="pin1">
                     <div class="about-section__container" id="txt1">

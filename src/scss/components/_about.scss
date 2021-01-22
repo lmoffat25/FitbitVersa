@@ -1,7 +1,27 @@
 
+.about-page {
+    .loader {
+        position : fixed;
+        bottom: 25%;
+        left: 10%;
+        width : rem(5);
+        height : rem(75);
+        background : $secondary-color;
+        border-radius : rem(5);
+        opacity : 1!important;
+
+        &__fill {
+            width : rem(5);
+            background : $primary-color-dark;
+            display: block;
+            border-radius : rem(5);
+        }
+    }
+}
 .about-page__title {
     position : fixed;
 }
+
 .about-section {
     @for $i from 1 through $triggerlength + 1 {
         #trigger#{$i} {
