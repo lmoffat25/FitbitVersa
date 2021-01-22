@@ -27,7 +27,7 @@ button {
     color :  $white;
     cursor : pointer;
     font-family: $font-title;
-    padding : rem(8) rem(40);
+    padding : rem(8) rem(40) !important;
     text-decoration : none;
     transition : $transition;
 
@@ -36,7 +36,7 @@ button {
         outline : none;
     }
     &:hover {
-        background : $white;
+        background : transparent;
         color : $primary-color;
     }
 
@@ -49,6 +49,12 @@ button {
         &:hover {
             background : $primary-color;
             color : $white;
+        }
+    }
+
+    &.-opac {
+        &:hover {
+            background-color: $white;
         }
     }
 
