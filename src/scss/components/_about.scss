@@ -1,0 +1,81 @@
+
+.about-page__title {
+    position : fixed;
+}
+.about-section {
+    @for $i from 1 through $triggerlength + 1 {
+        #trigger#{$i} {
+            position : absolute;
+            top : calc(#{$i - 1} * 100vh);
+        }
+    }
+
+    &__container {
+        opacity : 0;
+        transition : all .4s ease-out;
+
+        &.-active {
+            opacity : 1;
+
+            .about-section__title {
+                transform : translate3d(0rem, 0rem, 0);
+
+                @include large-up {
+                    transform : rotate(-90deg) translate3d(0rem, 7rem, 0);
+                }
+                opacity : .2;
+            }
+        }
+    }
+    
+    &__content {
+        display: flex;
+        justify-content : center;
+        align-items : center;
+        position : fixed;
+        top : 50%;
+        transform : translate3d(0, -50%, 0);
+        width : 100%;
+
+        @include large-down {
+            flex-flow : column;
+            transform : translate3d(0, -40%, 0);
+        }
+    }
+
+
+    &__title{
+        transform : translate3d(10rem, 0, 0);
+        width : fit-content;
+        height : fit-content;
+        z-index : -1;
+        opacity : 0;
+        font-weight: normal;
+
+        @include large-up {
+            transform : rotate(-90deg) translate3d(10rem, 7rem, 0);
+        }
+        transition : all .4s ease-out;
+
+        // Devrait sauter
+        font-size : rem(100);
+    }
+
+    &__text {
+        max-width : rem(344);
+        margin : 1rem;
+        @include large-up {
+            transform: translate3d(0, -2rem, 0);
+            margin : 0;
+        }
+    }
+
+    &__img {
+        width : rem(324);
+        z-index : -1;
+
+        @include large-up {
+            transform: translate3d(-1rem, 0, 0);
+        }
+    }
+}
