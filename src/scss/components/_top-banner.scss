@@ -1,9 +1,35 @@
 .top-banner {
     align-items: center;
+    background: url("../../images/bg-top-banner.png");
+    background-size: cover;
     display: flex;
     flex-flow: column;
-    justify-content: space-around;
+    justify-content: center;
     height: 100vh;
-    
+    padding-top: rem(65);
+    .content {
+        text-align: center;
+        position: relative;
+        width: 100%;
+        h1 {
+            color: $white;
+            font-size: 150px;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            width: max-content;
+            &:first-of-type {
+                font-weight: normal;
+                top: -30px;
+            }
+            &:last-of-type {
+                bottom: 0;
+                font-weight: 600;
+            }
+        }
+    }
+    button {
+        margin-top: 40px;
+    }
 }
 

@@ -2,10 +2,25 @@
     display : flex;
     flex-flow : column;
     align-items : center;
-    margin-bottom: rem(64);
+    margin: rem(64) auto;
+
+    &__img, &__content {
+        text-align: center;
+    }
+
+    &__img {
+        margin-bottom: rem(50);
+        h2 {
+            font-size: rem(50);
+            font-weight: bold;
+            margin-top: rem(-25);
+        }
+    }
 
     &__content {
-        text-align: center;
+        h3 {
+            text-transform: uppercase;
+        }
     }
 
     &__title {
