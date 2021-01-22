@@ -48,6 +48,24 @@
         <?php endwhile;
     endif; ?>
     </div>
+
+<?php if (have_rows('circles_functionalities')) :
+    while (have_rows('circles_functionalities')) : the_row(); ?>
+        <div class="fonctionnalites col-md-12">
+            <h2 class=""><?php echo get_sub_field('title'); ?></h2>
+            <div class="fonctionnalites__container col-10 centerHz">
+                <?php if (have_rows('circles_functionalities_functionalities')) :
+                    while (have_rows('circles_functionalities_functionalities')) : the_row(); ?>
+                        <div class="fonctionnalites__image col-6 col-md-3">
+                            <img src="<?php echo get_sub_field('img')['sizes']['medium']; ?>" alt="photo">
+                            <p><?php echo get_sub_field('desc'); ?></p>
+                        </div>
+                    <?php endwhile;
+                endif; ?>
+            </div>
+        </div>
+    <?php endwhile;
+endif; ?>
     
 <?php
 get_template_part( 'template-parts/options-newsletter' );
