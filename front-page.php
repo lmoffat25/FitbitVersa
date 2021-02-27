@@ -13,15 +13,15 @@ get_header();
 </section>
 
 
-<div class="col-10 centerHz">
+<div class="img_desc col-12 col-lg-10 col-xl-8 centerHz">
     <div class="row">
         <?php if (have_rows('title_img_desc')) :
             while (have_rows('title_img_desc')) : the_row(); ?>
-                <div class="col-5">
+                <div class="col-12 col-md-5">
                     <h2 class="title_h2"><?php echo get_sub_field('title'); ?></h2>
                     <p><?php echo get_sub_field('desc'); ?></p>
                 </div>
-                <div class="col-7"><img src="<?php echo get_sub_field('img')['sizes']['medium']; ?>"></div>
+                <div class="col-12 col-md-7"><img src="<?php echo get_sub_field('img')['sizes']['large']; ?>"></div>
             <?php endwhile;
         endif; ?>
     </div>

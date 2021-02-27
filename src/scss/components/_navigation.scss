@@ -176,6 +176,25 @@ $link-length : 2;
         @include large-down() {
             display : none;
         }
+        &.-profile, &.-cart {
+            a {
+                content: '';
+                display: block;
+                height: 30px;
+                text-indent: -9999999px;
+                width: 30px;
+            }
+        }
+        &.-profile {
+            a {
+                background: url('../../images/profil.svg') no-repeat;
+            }
+        }
+        &.-cart {
+            a {
+                 background: url('../../images/panier.svg') no-repeat;
+             }
+        }
     }
 }
 

@@ -24,16 +24,15 @@
         <nav class="mainNav nav -close admin-header">
             <div class="mainNav__container col-md-10 centerHz">
                 <a href="<?php bloginfo('url'); ?>" class="mainNav__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/fitbit-logo.png" alt="Image"></a>
-                <ul class="mainNav__list col-s-8 ">
-                    <li class="mainNav__link"><a href="">Fitbit Versa 3</a></li>
-                    <li class="mainNav__link"><a href="">à propos de fitbit</a></li>
-                    <li class="mainNav__link"><a href="">support</a></li>
-                    <li class="mainNav__icon"><a href=""><img src="" alt="icone"></a></li>
-                    <li class="mainNav__icon"><a href=""><img src="" alt="icone"></a></li>
-                    <li class="mainNav__icon"><a href=""><img src="" alt="icone"></a></li>
-                    <li class="mainNav__account"><a href="" class="button">Mon Compte</a></li>
-                    <li class="mainNav__account"><a href="" class="button -secondary">Déconnexion</a></li>
-                </ul>
+                <?php
+                    if ( has_nav_menu( 'main-menu' ) ) :
+                    wp_nav_menu ( array (
+                    'theme_location' => 'main-menu' ,
+                    'menu_class' => 'mainNav__list col-s-8', // classe CSS pour customiser mon menu
+                    ) );
+                endif;
+                ?>
+                
             </div>
         </nav>
 	</header>
