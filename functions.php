@@ -3,7 +3,7 @@
      * Ajout des styles et des scripts 
      * ********************************/
     function lpwd_add_styles_and_scripts() {
-        wp_enqueue_style( 'main', get_template_directory_uri() .'/dist/css/main.css' );  
+        wp_enqueue_style( 'main', get_template_directory_uri() .'/src/css/main.css' );  
         wp_enqueue_script( 'perso', get_template_directory_uri() . '/dist/js/perso.js', array('jquery'), '2.0', true);
         wp_enqueue_script( 'navigation', get_template_directory_uri() . '/dist/js/main-csss-animation.js', array(), '2.0', true);
 

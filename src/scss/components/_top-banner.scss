@@ -20,16 +20,19 @@
             width: max-content;
             &:first-of-type {
                 font-weight: normal;
-                top: -30px;
+                //top: -30px;
             }
             &:last-of-type {
                 bottom: 0;
                 font-weight: 600;
             }
         }
+        img {
+            width: 45%;
+        }
     }
     button {
-        margin-top: 40px;
+        //margin-top: 40px;
     }
 }
 

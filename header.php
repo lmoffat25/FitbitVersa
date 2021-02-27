@@ -23,7 +23,7 @@
 	<header class="header">
         <nav class="mainNav nav -close admin-header">
             <div class="mainNav__container col-md-10 centerHz">
-                <a href="" class="mainNav__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/fitbit-logo.png" alt="Image"></a>
+                <a href="<?php bloginfo('url'); ?>" class="mainNav__logo"><img src="<?php echo get_template_directory_uri(); ?>/images/fitbit-logo.png" alt="Image"></a>
                 <ul class="mainNav__list col-s-8 ">
                     <li class="mainNav__link"><a href="">Fitbit Versa 3</a></li>
                     <li class="mainNav__link"><a href="">à propos de fitbit</a></li>
