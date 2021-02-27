@@ -1,62 +1,51 @@
 <?php
 /* Template Name: About */
 
- wp_head();
+get_header();
 ?>
 <main class="about-page">
 
-    <h1 class="about-page__title"><?php echo get_the_title() ?></h1>
+<?php $args = array(
+    'post_type' => 'sections-about',
+    'posts_per_page' => 3,
+    'order' => 'ASC',
+);
+
+// 2. On exécute la WP Query
+$my_query = new WP_Query( $args );
+?>
 
     <section class="about-section scroll-about">
-                <div class="trigger" id="trigger1"></div>
-                <div class="trigger" id="trigger2"></div>
-                <div class="trigger" id="trigger3"></div>
-                <div class="trigger" id="trigger4"></div>
+        <?php $i=0;
+        if ($my_query->have_posts()) : 
+            while ($my_query->have_posts()) : $my_query->the_post();
+                $i++; ?>
+                <div class="trigger" id="trigger<?php echo $i; ?>"></div>
+            <?php endwhile;
+        endif; ?>
 
-                <div class="loader"><span class="loader__fill"></span></div>
+        <div class="loader"><span class="loader__fill"></span></div>
 
-
-                <div id="pin1">
-
-                    <div class="about-section__container" id="txt1">
-                        <div class="about-section__content">
-                            <h2 class="about-section__title">2018</h2>
-                            <p class="about-section__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro ad, sint numquam molestias assumenda maiores?</p>
-                            <img class="about-section__img" src="http://localhost/theme-alex-arnaud/wp-content/uploads/stresse.png" alt="Une photo">    
-                        </div>
-                    </div>
-        
-        
-                    <div class="about-section__container" id="txt2">
-                        <div class="about-section__content">
-                            <h2 class="about-section__title">2019</h2>
-                            <p class="about-section__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro ad, sint numquam molestias assumenda maiores?</p>
-                            <img class="about-section__img" src="http://localhost/theme-alex-arnaud/wp-content/uploads/musique.png" alt="Une photo">    
-                        </div>
-                    </div>
-        
-                    <div class="about-section__container" id="txt3">
-                        <div class="about-section__content">
-                            <h2 class="about-section__title">2020</h2>
-                            <p class="about-section__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro ad, sint numquam molestias assumenda maiores?</p>
-                            <img class="about-section__img" src="http://localhost/theme-alex-arnaud/wp-content/uploads/dodo.png" alt="Une photo">    
-                        </div>
-                    </div>
-        
-                    <div class="about-section__container" id="txt4">
-                        <div class="about-section__content">
-                            <h2 class="about-section__title">2021</h2>
-                            <p class="about-section__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro ad, sint numquam molestias assumenda maiores?</p>
-                            <img class="about-section__img" src="http://localhost/theme-alex-arnaud/wp-content/uploads/sportive.png" alt="Une photo">    
-                        </div>
-                    </div>
-                    
+        <div id="pin1">
+            <?php $i=0;
+            if ($my_query->have_posts()) : 
+            while ($my_query->have_posts()) : $my_query->the_post();
+            $i++; ?>
+            <div class="about-section__container" id="txt<?php echo $i; ?>">
+                <div class="about-section__content">
+                    <h2 class="about-section__title"><?php the_title(); ?></h2>
+                    <p class="about-section__text"><?php the_content(); ?></p>
+                    <img class="about-section__img" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Une photo">    
                 </div>
+            </div>
+            <?php endwhile;
+            endif; ?>
+        </div>
     </section>
 
 </main>
 
 
 <?php
- wp_footer()
+get_footer();
  ?>
