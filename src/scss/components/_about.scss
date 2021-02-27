@@ -15,6 +15,9 @@
             background : $primary-color-dark;
             display: block;
             border-radius : rem(5);
+            transform : scaleY(0);
+            height : 100%;
+            transform-origin : top;
         }
     }
 }

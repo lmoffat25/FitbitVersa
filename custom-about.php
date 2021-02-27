@@ -13,10 +13,11 @@
                 <div class="trigger" id="trigger3"></div>
                 <div class="trigger" id="trigger4"></div>
 
-                <div class="loader"><span class="loader__fill" style="height : 0%;"></span></div>
+                <div class="loader"><span class="loader__fill"></span></div>
 
 
                 <div id="pin1">
+
                     <div class="about-section__container" id="txt1">
                         <div class="about-section__content">
                             <h2 class="about-section__title">2018</h2>
@@ -49,6 +50,7 @@
                             <img class="about-section__img" src="http://localhost/theme-alex-arnaud/wp-content/uploads/sportive.png" alt="Une photo">    
                         </div>
                     </div>
+                    
                 </div>
     </section>
 

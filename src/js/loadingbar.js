@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', function() {
 
-        progress = (document.body.scrollTop / ( document.body.scrollHeight - window.innerHeight ) ) * 100;
-        bar.style.height = progress + "%";
-        
+        progress = (document.body.scrollTop / ( document.body.scrollHeight - window.innerHeight ) );
+        bar.style.transform = "scaleY(" + progress + ")";
+        console.log(progress);
     });
 });
