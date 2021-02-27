@@ -159,7 +159,12 @@ Table des matières :
   justify-content: space-between;
 }
 .reinssurance__card img {
+  border-top: 6px solid #559bd9;
   display: block;
+}
+.reinssurance__buttons {
+  display: flex;
+  justify-content: space-between;
 }
 .reinssurance__buttons a {
   display: inline-block;
@@ -171,6 +176,9 @@ Table des matières :
 }
 .reinssurance__content {
   padding: 1rem;
+}
+.reinssurance__content p {
+  padding: 0.9375rem 0;
 }
 @media screen and (max-width: 640px) {
   .reinssurance {
@@ -288,6 +296,7 @@ Table des matières :
   display: flex;
   flex-flow: wrap;
   align-items: center;
+  list-style: none;
 }
 .footer__item {
   border-right: 0.125rem solid #212121;
@@ -295,8 +304,10 @@ Table des matières :
   margin-right: 1rem;
   height: -webkit-fit-content;
   height: fit-content;
-  text-decoration: none;
+}
+.footer__item a {
   color: #212121;
+  text-decoration: none;
 }
 .footer__item:visited {
   color: inherit;
@@ -304,6 +315,10 @@ Table des matières :
 .footer__item:last-of-type {
   border: none;
   padding-right: none;
+}
+
+.img_desc {
+  margin: 20px auto !important;
 }
 
 /*#######################################################
@@ -476,6 +491,19 @@ Table des matières  :
   .mainNav__icon {
     display: none;
   }
+}
+.mainNav__icon.-profile a, .mainNav__icon.-cart a {
+  content: "";
+  display: block;
+  height: 30px;
+  text-indent: -9999999px;
+  width: 30px;
+}
+.mainNav__icon.-profile a {
+  background: url("../../images/profil.svg") no-repeat;
+}
+.mainNav__icon.-cart a {
+  background: url("../../images/panier.svg") no-repeat;
 }
 
 /* @3 Navbar Mobile ----------------------------------------*/
@@ -745,16 +773,14 @@ Table des matières  :
 }
 .top-banner .content h1:first-of-type {
   font-weight: normal;
-  top: -30px;
 }
 .top-banner .content h1:last-of-type {
   bottom: 0;
   font-weight: 600;
 }
-.top-banner button {
-  margin-top: 40px;
+.top-banner .content img {
+  width: 45%;
 }
-
 /*#######################################################
 
 Table des matières  :
@@ -783,7 +809,7 @@ button {
   color: #F2F2F2;
   cursor: pointer;
   font-family: "Maven Pro", sans-serif;
-  padding: 0.5rem 2.5rem !important;
+  padding: 0.5rem 2.5rem;
   text-decoration: none;
   transition: 0.3s ease all;
 }
@@ -806,8 +832,8 @@ button {
 .button.-opac:hover {
   background-color: #F2F2F2;
 }
-.button.-big {
-  padding: 0.5rem 2.5rem;
+.button.-small {
+  padding: 0.25rem 1.25rem !important;
 }
 .button.-alt {
   background: transparent;
@@ -1071,7 +1097,7 @@ img {
   max-width: 100%;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p, h1, h2, h3, h4, h5, h6, ul {
   margin: 10px 0;
 }
 
@@ -1112,7 +1138,6 @@ main {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
 }
 
 /* Grouping content
@@ -1414,10 +1439,6 @@ template {
  */
 [hidden] {
   display: none;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
 }
 
 /* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
@@ -1873,10 +1894,10 @@ body, select, p, a {
   font-family: "Open Sans", sans-serif;
 }
 
-a, a:visited {
+a {
   color: #559bd9;
 }
-a:hover, a:visited:hover {
+a:hover {
   color: #88B9E5;
   text-decoration: none;
 }

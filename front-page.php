@@ -8,6 +8,7 @@ get_header();
         <h1>Fitbit</h1>
         <img src="<?php echo get_template_directory_uri(); ?>/images/customisation.png" alt="">
         <h1 class="-grey">Versa 3</h1>
+        <h2>booh</h2>
     </div>
     <button class="button -big -opac">Découvrir</button>
 </section>
